@@ -1,4 +1,4 @@
-namespace MidiPlayerTK
+﻿namespace MidiPlayerTK
 {
     /// <summary>@brief
     /// Cover fluid_inst_zone_t and fluid_preset_zone_t

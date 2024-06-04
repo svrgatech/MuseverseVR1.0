@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+Ôªø#define MPTK_PRO
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -155,7 +155,7 @@ namespace DemoMPTK
             {
 #if MPTK_PRO
                 // OnMidiEvent (pro) and OnEventNotesMidi are triggered for each notes that the MIDI sequencer read
-                // However, the use of these methods depends on the specific requirements of the situation.î:
+                // However, the use of these methods depends on the specific requirements of the situation.‚Äù:
                 //      OnEventNotesMidi is handled from the main Unity thread (in the Update loop) 
                 //          - The accuracy of this process is not guaranteed because it depends on the Unity process and the value of Time.deltaTime.
                 //            (interval in seconds from the last frame to the current one).
@@ -222,7 +222,7 @@ namespace DemoMPTK
                 midiFilePlayer.OnEventStartPlayMidi.AddListener(info =>
                     {
                         MaestroOnEventStartPlayMidi("Event set by script");
-                        // Itís a good opportunity to change the channel configuration.î
+                        // It‚Äôs a good opportunity to change the channel configuration.‚Äù
                         // Example (uncomment to disable channel 0 at start)
                         // midiFilePlayer.MPTK_Channels[0].Enable = false;
                     });

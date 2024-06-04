@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 //#define DEBUG_STATUS_STAT // also in MidiSynth.cs
 
 using System;

@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+ï»¿#define MPTK_PRO
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -74,7 +74,7 @@ namespace DemoMPTK
                 if (colors == null)
                 {
                     colors = new Color[16];
-                    // Remplir le tableau avec des couleurs différentes (thanks to CoPilot !)
+                    // Remplir le tableau avec des couleurs diffÃ©rentes (thanks to CoPilot !)
                     colors[0] = Color.red;
                     colors[1] = Color.green;
                     colors[2] = Color.blue;
@@ -122,7 +122,7 @@ namespace DemoMPTK
                 //      if value = min, normalised value will be 0
                 //      if value = max, normalised value will be 1
                 //  Apply a coeff of 2 PI to get an angle in radian between 0 and 2 PI (full circle)
-                //  Add PI (rotation of 180 degré) 
+                //  Add PI (rotation of 180 degrÃ©) 
                 //  Avoid division by zero if min = max: return PI.
                 float angleNoteValue = noteMax == noteMin ? Mathf.PI : (((midiEvent.Value - noteMin) / (float)(noteMax - noteMin)) * Mathf.PI * 2f) + MathF.PI;
 

@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 // Copyright Cape Guy Ltd. 2018. http://capeguy.co.uk.
 // Provided under the terms of the MIT license -
 // http://opensource.org/licenses/MIT. Cape Guy accepts

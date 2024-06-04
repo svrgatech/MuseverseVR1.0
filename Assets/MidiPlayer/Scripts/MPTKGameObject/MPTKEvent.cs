@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +28,7 @@ namespace MidiPlayerTK
     /// MPTKEvent PatchChange = new MPTKEvent() {
     ///        Command = MPTKCommand.PatchChange,
     ///        Value = 12, // generally Marimba but depend on the SoundFont selected
-    ///        Channel = 0 }; // Instrument are defined by channel (from 0 to 15). So at any time, only 16 différents instruments can be used simultaneously.
+    ///        Channel = 0 }; // Instrument are defined by channel (from 0 to 15). So at any time, only 16 diffÃ©rents instruments can be used simultaneously.
     /// midiStreamPlayer.MPTK_PlayEvent(PatchChange);    
     ///
     /// // Play a C4 during one second with the Marimba instrument
@@ -373,8 +373,8 @@ namespace MidiPlayerTK
 
         /// <summary>@brief
         /// Convert Beat Per Minute to duration of a quarter in microsecond.\n
-        /// With BPM=1,   microsecondsPerQuaterNote=60 000 000 µs ->  60 secondes per quarter (quite slow!)\n
-        /// With BPM=120, microsecondsPerQuaterNote=500?000 µs -> 0.5 seconde per quarter\n
+        /// With BPM=1,   microsecondsPerQuaterNote=60 000 000 Âµs ->  60 secondes per quarter (quite slow!)\n
+        /// With BPM=120, microsecondsPerQuaterNote=500â€¯000 Âµs -> 0.5 seconde per quarter\n
         /// </summary>
         /// <param name="bpm">Beats Per Minute (with assumption beat=quarter)</param>
         /// <returns>60000000 / bpm or 500000 if bpm <= 0</returns>
@@ -385,7 +385,7 @@ namespace MidiPlayerTK
 
         /// <summary>@brief
         /// Convert duration of a quarter in microsecond to Beats Per Minute (with assumption beat=quarter).\n
-        /// With microsecondsPerQuaterNote=500?000 µs, BPM = 120
+        /// With microsecondsPerQuaterNote=500â€¯000 Âµs, BPM = 120
         /// </summary>
         /// <param name="microsecondsPerQuaterNote"></param>
         /// <returns>60000000 / bpm or 120 if microsecondsPerQuaterNote <= 0</returns>

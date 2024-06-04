@@ -1,4 +1,4 @@
-namespace MidiPlayerTK
+Ôªønamespace MidiPlayerTK
 {
     /** Sample types */
     public enum EnumSampleType
@@ -34,7 +34,7 @@ namespace MidiPlayerTK
         /// <summary>@brief
         /// Contains the MIDI key number of the recorded pitch of the sample. 
         /// For example, a recording of an instrument playing middle C(261.62 Hz) should receive a value of 60. 
-        /// This value is used as the default ìroot keyî for the sample, so that in the example, a MIDI key-on command for note number 60 would reproduce the sound at its original pitch.
+        /// This value is used as the default ‚Äúroot key‚Äù for the sample, so that in the example, a MIDI key-on command for note number 60 would reproduce the sound at its original pitch.
         /// For unpitched sounds, a conventional value of 255 should be used.Values between 128 and 254 are illegal.
         /// Whenever an illegal value or a value of 255 is encountered, the value 60 should be used.
         /// </summary>

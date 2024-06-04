@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+﻿#define MPTK_PRO
 using MPTK.NAudio.Midi;
 using System;
 using System.Collections.Generic;

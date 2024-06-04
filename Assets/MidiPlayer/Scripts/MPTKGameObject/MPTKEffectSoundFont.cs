@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+ï»¿#define MPTK_PRO
 using System;
 using UnityEngine;
 
@@ -18,8 +18,8 @@ namespace MidiPlayerTK
     /// @note
     ///     - Effects modules are exclusively available with the Maestro MPTK Pro version. 
     ///     - By default, these effects are disabled in Maestro. 
-    ///     - To enable them, you’ll need to adjust the settings from the prefab inspector (Synth Parameters / SoundFont Effect) or by script!
-    ///     - For enhanced sound quality, it’s often beneficial to add a low-filter effect.
+    ///     - To enable them, youâ€™ll need to adjust the settings from the prefab inspector (Synth Parameters / SoundFont Effect) or by script!
+    ///     - For enhanced sound quality, itâ€™s often beneficial to add a low-filter effect.
     /// @code
     /// // Find a MPTK Prefab, will works also for MidiStreamPlayer, MidiExternalPlayer ... all classes which inherit from MidiSynth.
     /// MidiFilePlayer fp = FindObjectOfType<MidiFilePlayer>();

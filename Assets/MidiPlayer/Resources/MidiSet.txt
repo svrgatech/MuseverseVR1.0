@@ -6,7 +6,7 @@
       <PatchCount>269</PatchCount>
       <WaveCount>864</WaveCount>
       <WaveSize>35262462</WaveSize>
-      <SF2Path>C:/Users/thier/AppData/LocalLow/Musit/Oboe Test\SoundFont\GeneralUser GS v1.471.sf2</SF2Path>
+      <SF2Path>C:/Users/Varun/AppData/LocalLow/DefaultCompany/VRM1Refactor\SoundFont\GeneralUser GS v1.471.sf2</SF2Path>
     </SoundFontInfo>
   </SoundFonts>
   <IndexSelectedSF>0</IndexSelectedSF>

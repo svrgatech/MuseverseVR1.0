@@ -1,4 +1,4 @@
-using MidiPlayerTK;
+﻿using MidiPlayerTK;
 using System;
 using System.Collections.Generic;
 using System.Text;

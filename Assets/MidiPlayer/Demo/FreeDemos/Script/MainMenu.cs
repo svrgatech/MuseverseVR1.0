@@ -1,4 +1,4 @@
-using MidiPlayerTK;
+ï»¿using MidiPlayerTK;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -106,7 +106,7 @@ namespace DemoMPTK
             //if (index < 0)
             //{
             //    Debug.LogWarning("To avoid interacting with your project, MPTK doesn't add MPTK scenes in the Build Settings.");
-            //    Debug.LogWarning("Add these scenes with “File/Build Settings” if you want a full functionality of the demonstrator.");
+            //    Debug.LogWarning("Add these scenes with â€œFile/Build Settingsâ€ if you want a full functionality of the demonstrator.");
             //}
             //else
             //    SceneManager.LoadScene(index, LoadSceneMode.Single);

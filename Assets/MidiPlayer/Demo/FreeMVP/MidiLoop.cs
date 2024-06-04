@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+﻿#define MPTK_PRO
 using MidiPlayerTK;
 using System.Collections.Generic;
 using UnityEngine;

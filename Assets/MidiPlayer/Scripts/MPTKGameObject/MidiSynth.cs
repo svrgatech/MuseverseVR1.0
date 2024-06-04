@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+ï»¿#define MPTK_PRO
 
 //#define DEBUG_HISTO_DSPSIZE 
 //#define DEBUG_PERF_NOTEON // warning: generate heavy cpu use
@@ -283,8 +283,8 @@ namespace MidiPlayerTK
         /// See more detailed information here https://paxstellar.fr/sound-effects/
         /// @note
         ///     - By default, only low-filter effect is enabled in Maestro. 
-        ///     - To enable them, you’ll need to adjust the settings from the prefab inspector (Synth Parameters / SoundFont Effect) or by script!
-        ///     - For enhanced sound quality, it’s beneficial to add a low-filter effect, it is enabled by default..
+        ///     - To enable them, youâ€™ll need to adjust the settings from the prefab inspector (Synth Parameters / SoundFont Effect) or by script!
+        ///     - For enhanced sound quality, itâ€™s beneficial to add a low-filter effect, it is enabled by default..
         /// @code
         /// // Find a MPTK Prefab, will works also for MidiStreamPlayer, MidiExternalPlayer ... all classes which inherit from MidiSynth.
         /// MidiFilePlayer fp = FindObjectOfType<MidiFilePlayer>();
@@ -2458,7 +2458,7 @@ namespace MidiPlayerTK
         //        if (voice.status == fluid_voice_status.FLUID_VOICE_ON &&
         //            voice.volenv_section < fluid_voice_envelope_index.FLUID_VOICE_ENVRELEASE)
         //        {
-        //            //Debug.Log($"fluid_synth_noteoff Channel:{pchan} key:{pkey} Isloop:{voice.IsLoop} Ignore:{keepPlayingNonLooped} Naùe:{voice.sample.Name}");
+        //            //Debug.Log($"fluid_synth_noteoff Channel:{pchan} key:{pkey} Isloop:{voice.IsLoop} Ignore:{keepPlayingNonLooped} NaÃ¹e:{voice.sample.Name}");
         //            voice.fluid_voice_noteoff();
         //        }
         //    }
@@ -2479,7 +2479,7 @@ namespace MidiPlayerTK
                     (!keepPlayingNonLooped || voice.samplemode == fluid_loop.FLUID_LOOP_UNTIL_RELEASE || voice.samplemode == fluid_loop.FLUID_LOOP_DURING_RELEASE) &&
                     (pkey == -1 || voice.key == pkey))
                 {
-                    //Debug.Log($"fluid_synth_noteoff Channel:{pchan} key:{pkey} Isloop:{voice.IsLoop} Ignore:{keepPlayingNonLooped} Naùe:{voice.sample.Name}");
+                    //Debug.Log($"fluid_synth_noteoff Channel:{pchan} key:{pkey} Isloop:{voice.IsLoop} Ignore:{keepPlayingNonLooped} NaÃ¹e:{voice.sample.Name}");
                     voice.fluid_rvoice_noteoff();
                 }
             }

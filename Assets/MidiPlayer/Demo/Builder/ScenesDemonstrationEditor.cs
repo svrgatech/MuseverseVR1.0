@@ -1,4 +1,4 @@
-// Uncomment to check mode editor
+﻿// Uncomment to check mode editor
 // Comment to build
 //#define CHECK_MODE_EDITOR
 

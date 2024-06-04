@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+﻿#define MPTK_PRO
 //#define DEBUG_STATUS_STAT // also in MidiSynth.cs
 
 using MidiPlayerTK;

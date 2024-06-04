@@ -1,4 +1,4 @@
-namespace MidiPlayerTK
+﻿namespace MidiPlayerTK
 {
     public enum fluid_gen_flags:byte
     {

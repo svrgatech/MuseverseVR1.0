@@ -11,6 +11,9 @@ public class VirtualMIDIInstrument : MonoBehaviour
 
     public int midiStartNumber;
 
+    public int CurrentPreset = 0;
+    public int StreamChannel;
+
     //the Virtual Midi Keys that are a part of this Instrument
     [SerializeField]
     private VirtualMIDIKey[] virtualMIDIKeys;
@@ -39,6 +42,21 @@ public class VirtualMIDIInstrument : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             TestMidiEvent();
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow)) CurrentPreset--;
+            if (Input.GetKeyDown(KeyCode.UpArrow)) CurrentPreset++;
+            CurrentPreset = Mathf.Clamp(CurrentPreset, 0, 127);
+
+            // Send the patch (other name for preset) change MIDI event to the MIDI synth
+            midiStreamPlayer.MPTK_PlayEvent(new MPTKEvent()
+            {
+                Command = MPTKCommand.PatchChange,
+                Value = CurrentPreset,   // From 0 to 127
+                Channel = StreamChannel, // From 0 to 15
+            });
         }
     }
 

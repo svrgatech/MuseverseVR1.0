@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using UnityEditor;
@@ -42,7 +42,7 @@ namespace MidiPlayerTK
                     infoStats.Add($"MPTK_KeySigSharpsFlats:  {midifile.MPTK_KeySigSharpsFlats}  number of flats (if negative) or sharps (if positive).");
                     infoStats.Add($"MPTK_KeySigMajorMinor:   " + ((midifile.MPTK_KeySigMajorMinor == 0) ? "Major" : "Minor"));
                     infoStats.Add($"MPTK_DeltaTicksPerQuarterNote:   {midifile.MPTK_DeltaTicksPerQuarterNote}");
-                    infoStats.Add($"MPTK_MicrosecondsPerQuarterNote: {midifile.MPTK_MicrosecondsPerQuarterNote} �seconds per quarter");
+                    infoStats.Add($"MPTK_MicrosecondsPerQuarterNote: {midifile.MPTK_MicrosecondsPerQuarterNote} µseconds per quarter");
                     infoStats.Add("");
 
                     infoStats.Add($"Tempo Change");

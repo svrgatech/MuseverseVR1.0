@@ -1,4 +1,4 @@
-/*
+﻿/*
  * 
  * this script has been replaced by ScenesDemonstrationMono.cs and can be deleted
  * 

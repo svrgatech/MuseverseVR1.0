@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 using MPTK.NAudio.Midi;
 using System;
 using System.Collections.Generic;

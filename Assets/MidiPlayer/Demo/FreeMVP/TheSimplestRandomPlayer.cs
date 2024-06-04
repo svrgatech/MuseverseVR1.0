@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MidiPlayerTK;
@@ -12,7 +12,7 @@ namespace DemoMVP
     /// Therefore, error tests are absent, the user interface is almost non-existent and manipulations in Unity are reduced. 
     /// 
     /// The goal is rather to learn how to use the Maestro API and then progress by building more complex applications.
-    /// Maestro is based on the use of prefabs (MidiFilePlayer, MidiStreamPlayer, �) which must be added in the Unity editor in the hierarchy of your project.
+    /// Maestro is based on the use of prefabs (MidiFilePlayer, MidiStreamPlayer, …) which must be added in the Unity editor in the hierarchy of your project.
     /// In these demos, we prefer to create the prefabs by script to avoid manipulations in the editor. 
     /// It is rather recommended to create Prefabs in Unity Editor to take advantage of the Inspectors and its many directly accessible parameters.
     /// 

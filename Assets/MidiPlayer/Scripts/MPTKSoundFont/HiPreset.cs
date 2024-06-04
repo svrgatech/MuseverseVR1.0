@@ -1,4 +1,4 @@
-namespace MidiPlayerTK
+﻿namespace MidiPlayerTK
 {
     /// <summary>@brief
     /// Preset from a ImSoundFont

@@ -1,5 +1,5 @@
-#if UNITY_EDITOR
-//#define MPTK_PRO
+﻿#if UNITY_EDITOR
+#define MPTK_PRO
 using System;
 using System.Collections.Generic;
 using UnityEditor;

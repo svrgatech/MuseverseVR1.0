@@ -1,5 +1,5 @@
-#if UNITY_EDITOR
-//#define MPTK_PRO
+﻿#if UNITY_EDITOR
+#define MPTK_PRO
 //#define DEBUG_EDITOR
 using System;
 using UnityEditor;

@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using UnityEditor;
@@ -539,7 +539,7 @@ namespace MidiPlayerTK
                                     {
                                         case MPTKMeta.KeySignature: text = $"SharpsFlats:{MPTKEvent.ExtractFromInt((uint)mptkEvent.Value, 0)} MajorMinor:{MPTKEvent.ExtractFromInt((uint)mptkEvent.Value, 1)}"; break;
                                         case MPTKMeta.TimeSignature: text = $"Numerator:{MPTKEvent.ExtractFromInt((uint)mptkEvent.Value, 0)} Denominator:{MPTKEvent.ExtractFromInt((uint)mptkEvent.Value, 1)}"; break;
-                                        case MPTKMeta.SetTempo: text = $"�seconds:{mptkEvent.Value} Tempo:{MPTKEvent.QuarterPerMicroSecond2BeatPerMinute(mptkEvent.Value):F0}"; break;
+                                        case MPTKMeta.SetTempo: text = $"µseconds:{mptkEvent.Value} Tempo:{MPTKEvent.QuarterPerMicroSecond2BeatPerMinute(mptkEvent.Value):F0}"; break;
                                         default: text = mptkEvent.Info ?? ""; break;
                                     }
                                     if (text.Length > 60) text = text.Substring(0, 60);

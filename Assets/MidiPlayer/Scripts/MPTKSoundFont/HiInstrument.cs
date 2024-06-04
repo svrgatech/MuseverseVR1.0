@@ -1,4 +1,4 @@
-namespace MidiPlayerTK
+﻿namespace MidiPlayerTK
 {
     /// <summary>@brief
     /// Instrument from a fluid_inst_t

@@ -1,4 +1,4 @@
-//#define MPTK_PRO
+﻿#define MPTK_PRO
 
 //#define DEBUG_HISTO_DSPSIZE 
 //#define DEBUG_PERF_NOTEON // warning: generate heavy cpu use
