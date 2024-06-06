@@ -55,13 +55,39 @@ public class SamplePackManager : MonoBehaviour
     void Start()
     {
 
+#if UNITY_ANDROID
+
+        //RequestPermissions();
+
+        ////Test Local Android Copy
+        string sourcePath = Path.Combine(Application.streamingAssetsPath, "MuseverseSamplePacks");
+        string targetPath = Path.Combine(Application.persistentDataPath, "MuseverseSamplePacks");
+
+        ////DirectoryCopier.CopyDirectory(sourcePath, targetPath);
+
+        samplePacksRootFolder = targetPath;
+
         ListFoldersInRoot(samplePacksRootFolder);
         BuildSamplePackMenu(samplePacksArray, autoLoad);
+
+#else
+
+        ListFoldersInRoot(samplePacksRootFolder);
+        BuildSamplePackMenu(samplePacksArray, autoLoad);
+#endif
 
  
         //Testing
         //LoadAudioClipsFromFolder(@"E:\MuseverseSamplePacks\DrumsPack1");
         
+    }
+
+    void RequestPermissions()
+    {
+        if (!UnityEngine.Android.Permission.HasUserAuthorizedPermission(UnityEngine.Android.Permission.ExternalStorageWrite))
+        {
+            UnityEngine.Android.Permission.RequestUserPermission(UnityEngine.Android.Permission.ExternalStorageWrite);
+        }
     }
 
     public void ListFoldersInRoot(string samplePacksRootFolder)
@@ -81,7 +107,7 @@ public class SamplePackManager : MonoBehaviour
             {
 
                 samplePacksArray = new string[folders.Length];
-                Debug.Log("Folders in the sample pack root folder:");
+                Debug.Log("Folders in the sample pack root folder:" + folders.Length);
 
                 for (int i = 0; i < folders.Length; i++)
                 {
@@ -327,7 +353,7 @@ public class SamplePackManager : MonoBehaviour
 
 
 
-    #region Unused LoadClip Functions
+#region Unused LoadClip Functions
     ////Load AudioClip to Looper
     //public IEnumerator LoadAudioClipFromFile(string filePath, Looper looper)
     //{
@@ -387,7 +413,7 @@ public class SamplePackManager : MonoBehaviour
     //        }
     //    }
     //}
-    #endregion
+#endregion
 
     public void PreviewAudioSample(string samplePath)
     {

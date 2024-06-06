@@ -66,7 +66,7 @@ public class VirtualMIDIInstrument : MonoBehaviour
         {
             Command = MPTKCommand.NoteOn, // midi command
             Value = midiNumber, // from 0 to 127, 48 for C4, 60 for C5, ...
-            Channel = 0, // from 0 to 15, 9 reserved for drum
+            Channel = StreamChannel, // from 0 to 15, 9 reserved for drum
             Duration = duration, // note duration in millisecond, -1 to play undefinitely, MPTK_StopChord to stop
             Velocity = velocity, // from 0 to 127, sound can vary depending on the velocity
             Delay = 0, // delay in millisecond before playing the note
@@ -81,7 +81,7 @@ public class VirtualMIDIInstrument : MonoBehaviour
         {
             Command = MPTKCommand.NoteOn, // midi command
             Value = 48, // from 0 to 127, 48 for C4, 60 for C5, ...
-            Channel = 2, // from 0 to 15, 9 reserved for drum
+            Channel = StreamChannel, // from 0 to 15, 9 reserved for drum
             Duration = 1000, // note duration in millisecond, -1 to play undefinitely, MPTK_StopChord to stop
             Velocity = 100, // from 0 to 127, sound can vary depending on the velocity
             Delay = 0, // delay in millisecond before playing the note
