@@ -87,6 +87,14 @@ public class SampleManager : MonoBehaviour {
         }
     }
 
+    public void LoadSamplesToSequencer(List<AudioClip> audioClips)
+    {
+        Debug.Log("Loading samples to Sequencer from AudioClip List");
+        AudioClip[] clipsAray = audioClips.ToArray();
+        InitializeSequencerWithClips(clipsAray);
+
+    }
+
 
 
 

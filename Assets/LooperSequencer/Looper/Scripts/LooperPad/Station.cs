@@ -713,6 +713,11 @@ public class Station : MonoBehaviour
         }
     }
 
+    public void InitialiseLooperWithClips(List<AudioClip> audioClips)
+    {
+        InitialiseLooperWithClips(audioClips.ToArray());
+    }
+
 
     public void InitialiseLooperWithClips(AudioClip[] audioClips)
     {

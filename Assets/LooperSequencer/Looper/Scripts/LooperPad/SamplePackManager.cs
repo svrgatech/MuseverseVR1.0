@@ -46,6 +46,10 @@ public class SamplePackManager : MonoBehaviour
 
     public UnityEvent OnSampleClipsLoaded;
 
+    public bool useAddressableSystem;
+    [SerializeField]
+    AudioClipAddressablesLoader audioClipAddressablesLoader;
+
 
 
     //UI For presetPack Loading
@@ -67,8 +71,16 @@ public class SamplePackManager : MonoBehaviour
 
         samplePacksRootFolder = targetPath;
 
-        ListFoldersInRoot(samplePacksRootFolder);
+        //if we are not using the Addressable system, the script will
+        //first load the folders present in the root samples folder, and make the SamplePacksArray
+        //else, it just builds the sample pack menu
+        if(!useAddressableSystem)
+        {
+            ListFoldersInRoot(samplePacksRootFolder);
+        }
         BuildSamplePackMenu(samplePacksArray, autoLoad);
+
+
 
 #else
 
@@ -76,18 +88,10 @@ public class SamplePackManager : MonoBehaviour
         BuildSamplePackMenu(samplePacksArray, autoLoad);
 #endif
 
- 
+
         //Testing
         //LoadAudioClipsFromFolder(@"E:\MuseverseSamplePacks\DrumsPack1");
-        
-    }
 
-    void RequestPermissions()
-    {
-        if (!UnityEngine.Android.Permission.HasUserAuthorizedPermission(UnityEngine.Android.Permission.ExternalStorageWrite))
-        {
-            UnityEngine.Android.Permission.RequestUserPermission(UnityEngine.Android.Permission.ExternalStorageWrite);
-        }
     }
 
     public void ListFoldersInRoot(string samplePacksRootFolder)
@@ -155,15 +159,26 @@ public class SamplePackManager : MonoBehaviour
                menuItem.GetComponentInChildren<TextMeshProUGUI>().text = samplePacksArray[i];
                menuItem.name = samplePacksArray[i];
 
-               string thumbNailPath = FindThumbnailPNG(samplePacksArray[i]);
-                if(!string.IsNullOrEmpty(thumbNailPath))
+                if(useAddressableSystem)
                 {
-                    menuItem.GetComponent<Image>().sprite = LoadSprite(thumbNailPath);
+                    string samplePackName = samplePacksArray[i];
+                    menuItem.GetComponent<ImageByLabelLoader>().LoadImageByLabel(samplePackName);
+                    menuItem.GetComponent<Button>().onClick.AddListener(() => LoadAudioClipsFromAddressableSystem(samplePackName));
                 }
+                else
+                {
+                    string thumbNailPath = FindThumbnailPNG(samplePacksArray[i]);
+                    if (!string.IsNullOrEmpty(thumbNailPath))
+                    {
+                        menuItem.GetComponent<Image>().sprite = LoadSprite(thumbNailPath);
+                    }
+                    //If it is autoload mode, we dont open the sample browser, but directly set the Sample Pack to
+                    //load up on the loopers when it is clicked. else, load the sample browser so we can add them individually
+                    menuItem.GetComponent<Button>().onClick.AddListener(() => LoadAudioClipsFromFolder(menuItem.name, autoLoad));
+                }
+             
 
-                //If it is autoload mode, we dont open the sample browser, but directly set the Sample Pack to
-                //load up on the loopers when it is clicked. else, load the sample browser so we can add them individually
-                menuItem.GetComponent<Button>().onClick.AddListener(() => LoadAudioClipsFromFolder(menuItem.name, autoLoad));
+             
               
                menuItem.SetActive(true);
             }
@@ -280,6 +295,14 @@ public class SamplePackManager : MonoBehaviour
         catch (Exception e)
         {
             Debug.LogError($"Error loading audio clips: {e.Message}");
+        }
+    }
+
+    public void LoadAudioClipsFromAddressableSystem(string samplePackName)
+    {
+        if(audioClipAddressablesLoader)
+        {
+            StartCoroutine(audioClipAddressablesLoader.InitializeAddressables(samplePackName));
         }
     }
 
