@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MuseverseMIDIPipeline/MidiStream 1.unity
     guid: 442358449ffe4eb499a2708a29d70975
+  - enabled: 0
+    path: Assets/AddressablesTest/AddressableTest.unity
+    guid: 8eee545131aea6c439fed3338586fe66
+  - enabled: 0
+    path: Assets/LooperSequencer/CombinedSceneAddressableMobile.unity
+    guid: 3282af90749f60c4f9b49590aa525453
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1ae53aa8de349bf4fb626bdcbcb5e69e,
       type: 2}

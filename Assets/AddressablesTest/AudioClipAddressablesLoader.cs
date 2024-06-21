@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
@@ -57,8 +58,6 @@ public class AudioClipAddressablesLoader : MonoBehaviour
             _trackAddresses.Add(location.ToString());
             Debug.Log("Found Track at " + location.ToString());
         }
-
-
     }
 
     void InitializeAudioClips()
@@ -69,14 +68,10 @@ public class AudioClipAddressablesLoader : MonoBehaviour
 
         int trackCount = 0;
 
-        foreach(var trackAddress in _trackAddresses)
-        {
+        List<string> audioPathList = _trackAddresses.Where(x => x.Contains(".mp3")).ToList();
 
-            int otherFileCount = 0;
-            //A HACK TO MAKE SURE THE PNG IMAGE THUMBNAIL IS NOT LOADED AS AN AUDIOCLIP
-            //MAKE BETTER!
-            if(!trackAddress.Contains(".png"))
-            {
+        foreach(var trackAddress in audioPathList)
+        {
                 Addressables.LoadAssetAsync<AudioClip>(trackAddress).Completed += operation =>
                 {
                     if (operation.Status != AsyncOperationStatus.Succeeded) return;
@@ -85,23 +80,15 @@ public class AudioClipAddressablesLoader : MonoBehaviour
                     _audioClipsList.Add(clip);
                     trackCount += 1;
                     Debug.Log($"Loaded {_groupName} {clip.name} for trackAddress {trackAddress}");
-                    Debug.Log("Track Count: " + trackCount + " " + (_trackAddresses.Count - otherFileCount));
+                    Debug.Log("Track Count: " + trackCount + " " + audioPathList.Count);
 
-                    if(trackCount == (_trackAddresses.Count - otherFileCount))
+                    if(trackCount == audioPathList.Count)
                     {
                         loadedAllClips = true;
                         OnAudioClipsLoaded.Invoke(_audioClipsList);
+                        Debug.Log($"{_audioClipsList.Count} tracks are in the _audioClipsList");
                     }
-
                 };
-            }
-            else
-            {
-                _trackAddresses.Remove(trackAddress);
-            }
-           
         }
-
-       
     }
 }

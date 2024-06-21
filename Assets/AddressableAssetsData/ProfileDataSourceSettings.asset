@@ -33,6 +33,42 @@ MonoBehaviour:
       m_Value: https://e98754aa-af47-4bf5-aa77-b4fc7b4cec6e.client-api.unity3dusercontent.com/client_api/v1/environments/{CcdManager.EnvironmentName}/buckets/{CcdManager.BucketId}/release_by_badge/{CcdManager.Badge}/entry_by_path/content/?path=
     - m_Suffix: EnvironmentName
       m_Value: production
+  - m_GroupTypePrefix: CCD.e98754aa-af47-4bf5-aa77-b4fc7b4cec6e.9f6daab6-9932-46bb-b75b-1df3a196cf70.f516caff-c1e4-47e6-8f24-6c7dd3bed25f.latest
+    m_Variables:
+    - m_Suffix: CcdBucketName
+      m_Value: Android
+    - m_Suffix: CcdBucketId
+      m_Value: f516caff-c1e4-47e6-8f24-6c7dd3bed25f
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: PromoteOnly
+      m_Value: True
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: Environmentid
+      m_Value: 9f6daab6-9932-46bb-b75b-1df3a196cf70
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/9f6daab6-9932-46bb-b75b-1df3a196cf70/f516caff-c1e4-47e6-8f24-6c7dd3bed25f/latest
+    - m_Suffix: LoadPath
+      m_Value: https://e98754aa-af47-4bf5-aa77-b4fc7b4cec6e.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/f516caff-c1e4-47e6-8f24-6c7dd3bed25f/release_by_badge/latest/entry_by_path/content/?path=
+  - m_GroupTypePrefix: CCD.e98754aa-af47-4bf5-aa77-b4fc7b4cec6e.349a838c-5455-4b2f-b110-9e51f4e5f902.944d0670-fa39-45f0-8518-b5e35f5377e2.latest
+    m_Variables:
+    - m_Suffix: CcdBucketName
+      m_Value: Android
+    - m_Suffix: CcdBucketId
+      m_Value: 944d0670-fa39-45f0-8518-b5e35f5377e2
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: PromoteOnly
+      m_Value: False
+    - m_Suffix: Environmentname
+      m_Value: development
+    - m_Suffix: Environmentid
+      m_Value: 349a838c-5455-4b2f-b110-9e51f4e5f902
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/349a838c-5455-4b2f-b110-9e51f4e5f902/944d0670-fa39-45f0-8518-b5e35f5377e2/latest
+    - m_Suffix: LoadPath
+      m_Value: https://e98754aa-af47-4bf5-aa77-b4fc7b4cec6e.client-api.unity3dusercontent.com/client_api/v1/environments/development/buckets/944d0670-fa39-45f0-8518-b5e35f5377e2/release_by_badge/latest/entry_by_path/content/?path=
   - m_GroupTypePrefix: CCD.e98754aa-af47-4bf5-aa77-b4fc7b4cec6e.349a838c-5455-4b2f-b110-9e51f4e5f902.030fc287-71b1-4125-ae11-b25a5775432b.latest
     m_Variables:
     - m_Suffix: CcdBucketName
